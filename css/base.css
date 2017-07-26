@@ -11,12 +11,16 @@
 	transition: all .2s ease 0s;
 }
 
-html {font-size: 62.5%}
+html {
+    font-size: .625em; /* fallback IE8+ */
+    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+	font-size: 62.5%;
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.6;
 }
 
@@ -24,11 +28,13 @@ a, a:hover, a:visited, a:active {
 	text-decoration: none;
 }
 
-/* Ici, vous pouvez rajouter vos class "standard". Avec l'expérience,
-vous verrez que beaucoup de chose reviennent d'un projet à l'autre,
-vous pouvez donc les standardiser sous forme de class. */
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
 
-/* EXEMPLE DE CLASS STANDARDISÉ */
 
 .container {
 	margin: 0 auto; /* Vous avez juste à définir la taille dans votre style.css */
