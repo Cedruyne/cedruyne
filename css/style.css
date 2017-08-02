@@ -6,13 +6,23 @@
     box-sizing: border-box;
 }
 
-
 /*
     ***     MOBILE FIRST        ***
      This applies from 0px to 479px
  */
 
 /* HEADER */
+header {
+    background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.8);
+    padding: 20px;
+}
+
+header h1 {
+    display: inline;
+    max-width: 80%;
+}
+
 #mainNav {
     display: flex;
     flex-direction: column;
@@ -21,8 +31,99 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 20px;
-    background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.8);
+}
+
+
+/* MENU HAMBURGER */
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    background-color: transparent;
+    margin: 0;
+    overflow: visible;
+    border: none;
+    outline: none !important;
+    color: #D3D3D3;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-width: 10%;
+    float: right;
+}
+
+.hamburger:hover {
+    color: #ffd587;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #9e9ba4;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -10px;
+}
+.hamburger-inner::after {
+    bottom: -10px;
+}
+.hamburger--collapse .hamburger-inner {
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-color: #ffd587;
+}
+.hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+    background-color: #ffd587;
+}
+.hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-color: #ffd587;
 }
 
 #mainNav a {
