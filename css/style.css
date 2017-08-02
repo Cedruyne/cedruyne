@@ -1,18 +1,21 @@
 /* FONT FACE */
-/* Appelle les polices de la page */
 @import url(//fonts.googleapis.com/css?family=Raleway:400,500,700,900|Dosis:800|Playfair+Display:400,400italic,900italic|Lora:700|Syncopate:700|Roboto+Condensed:300italic|Oswald:700);
 
 /*GLOBAL */
-/* Balises et class appelés à plusieurs endroits dans la page */
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
 
+/*
+    ***     MOBILE FIRST        ***
+     This applies from 0px to 479px
+ */
+
 /* HEADER */
-/* Ce qui concerne le header et la nav */
 #mainNav {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
@@ -20,6 +23,10 @@
     padding: 20px;
     background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
     box-shadow: 0 3px 10px 0 rgba(0,0,0,0.8);
+}
+
+#mainNav a {
+    margin: 10px;
 }
 
 #mainNav .fa{
@@ -115,11 +122,29 @@
 }
 
 
-
-
-
 /* MAIN */
 /* Ce qui concerne le corps du site */
 
 /* FOOTER */
 /* Ce qui concerne le footer */
+
+/*
+ ***    MOBILE LANDSKAPE & TABLET  ***
+*/
+@media (min-width: 480px) and (max-width: 959px) {
+
+}
+
+/*
+ ***    TABLET LANDSKAPE & SMALL SCREEN  ***
+*/
+@media (min-width: 960px) and (max-width: 1279px) {
+
+}
+
+/*
+ ***    LARGE SCREEN ***
+*/
+@media (min-width: 1280px)  {
+
+}
