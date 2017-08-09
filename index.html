@@ -15,92 +15,83 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 </head>
 <body>
-    <!--HEADER-->
-    <header>
-        <nav id="mainNav">
-        <h1 class="site-logo">
-            <a href="http://www.cedruyne.fr" title="Cédric de Bruyne, développeur d'applications Web PHP">
-                <img class="logo" src="img/logo.png"  alt="Logo Cedruyne" />
-            </a>
-        </h1>
-        <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-            <div>Menu</div>
-        </button>
-            <a href="#" class="link link--yaku">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>P</span>
-                <span>r</span>
-                <span>é</span>
-                <span>s</span>
-                <span>e</span>
-                <span>n</span>
-                <span>t</span>
-                <span>a</span>
-                <span>t</span>
-                <span>i</span>
-                <span>o</span>
-                <span>n</span>
-            </a>
-            <a href="#" class="link link--yaku">
-                <i class="fa fa-archive" aria-hidden="true"></i>
-                <span>R</span>
-                <span>é</span>
-                <span>a</span>
-                <span>l</span>
-                <span>i</span>
-                <span>s</span>
-                <span>a</span>
-                <span>t</span>
-                <span>i</span>
-                <span>o</span>
-                <span>n</span>
-                <span>s</span></a>
-            <a href="#" class="link link--yaku">
-                <i class="fa fa-comments-o" aria-hidden="true"></i>
-                <span>C</span>
-                <span>o</span>
-                <span>n</span>
-                <span>t</span>
-                <span>a</span>
-                <span>c</span>
-                <span>t</span></a>
-        </nav>
-    </header>
+    <div class="container">
+        <!--HEADER-->
+        <header class="siteHeader">
+            <nav id="mainNavigation" class="mainNavigation">
+                <h1>
+                    <a href="#" title="Cédric de Bruyne, développeur d'applications Web PHP">
+                        <span class="name">&lt;<span class="yellow"> &#47; </span>&gt; Cédric DE BRUYNE</span>
+                        <span class="subtitle">Développeur d'applications Web PHP</span>
+                    </a>
+                </h1>
+                <a href="#" class="navLink navLink--yaku">
+                    <i class="fa fa-user"></i>
+                    <span>P</span>
+                    <span>r</span>
+                    <span>é</span>
+                    <span>s</span>
+                    <span>e</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span>n</span>
+                </a>
+                <a href="#" class="navLink navLink--yaku">
+                    <i class="fa fa-archive"></i>
+                    <span>R</span>
+                    <span>é</span>
+                    <span>a</span>
+                    <span>l</span>
+                    <span>i</span>
+                    <span>s</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>s</span></a>
+                <a href="#" class="navLink navLink--yaku">
+                    <i class="fa fa-envelope-o"></i>
+                    <span>C</span>
+                    <span>o</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span>a</span>
+                    <span>c</span>
+                    <span>t</span></a>
+            </nav>
+        </header>
 
-    <!--MAIN CONTENT-->
-    <main>
-    </main>
+        <!--MAIN CONTENT-->
+        <main class="main">
 
-    <!--FOOTER-->
-    <footer>
-    </footer>
-    <script>
+            <h1>Navigation "push left JS"</h1>
+            <p>Navigation mobile-first "Push Left" librement inspiré du code du livre <a href="">Responsive Design Patterns</a> de Ethan Marcotte</p>
+            <ul>
+                <li>JavaScript pour le comportement "touch" et la génération du bouton de menu</li>
+                <li>CSS pour les styles et les transitions</li>
+            </ul>
+            <p>Le principe général est celui-ci :</p>
+            <ul>
+                <li>Si JavaScript n'est pas activé ou si le navigateur est ancien, la navigation s'affiche simplement dans le flux, de façon accessible</li>
+                <li>Sur petit écran (maxi 544px), "main" s'affiche par dessus "navigation" et le bouton de navigation "nav-button" apparaît. <br>JavaScript s'occupe de l'action "touch" en ajoutant/retirant la classe ".is-opened" sur "main".</li>
+                <li>Sur grand écran (mini 545px), "navigation" est simplement placée dans le flux en haut de "main".</li>
+            </ul>
+            <p>Lorem Elsass ipsum réchime amet non Choucroute knack tchao bissame hopla. Wotch a kofee avec ton BibalaekaesSalat et ta wurscht ?</p>
+            <p>Yeuh non che suis au réchime, je ne mange plus que des Grumbeere light et che fais de la chym avec Chulien. Tiens, un Picon sur le comptoir.</p>
+            <p>Allez tchao bissame !</p>
 
-        /**
-         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
-         *
-         * @private
-         * @author Todd Motto
-         * @link https://github.com/toddmotto/foreach
-         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
-         * @callback requestCallback      callback   - Callback function for each iteration.
-         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
-         * @returns {}
-         */
-        var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
-        var hamburgers = document.querySelectorAll(".hamburger");
-        if (hamburgers.length > 0) {
-            forEach(hamburgers, function(hamburger) {
-                hamburger.addEventListener("click", function() {
-                    this.classList.toggle("is-active");
-                }, false);
-            });
-        }
+        </main>
 
-    </script>
+        <!--FOOTER-->
+        <footer>
+        </footer>
+    </div>
+<script src="js/main.js"></script>
 </body>
 </html>
