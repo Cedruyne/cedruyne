@@ -15,11 +15,16 @@
      This applies from 0px to 479px
  */
 
-/* HEADER */
-.siteHeader {
+/* NAVIGATION */
+.mainNavigation {
     background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
     box-shadow: 0 3px 10px 0 rgba(0,0,0,0.8);
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mainNavigation  a {
@@ -34,25 +39,14 @@
 
 .name {
     display: block;
-    line-height: 1.2;
 }
 
 .subtitle {
     display: block;
-    font-size: 0.4em; /* 12px / 30px  */
+    font-size: 0.3em; /* 12px / 30px  */
     font-weight: bold;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    padding-left: 0.833333333333333em; /* 25px / 30px */
-
-}
-
-.mainNavigation{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 
 }
 
@@ -158,7 +152,48 @@
     transition-delay: 0.3s;
 }
 
+/* HEADER */
+.cover{
+    background: url(../img/bg_cover.jpg) no-repeat top center fixed;
+    min-height: 60vh;
+    background-size: cover;
+}
 
+.cover h2 {
+    margin: 0;
+}
+
+header .bgCover{
+    z-index: 1;
+    min-height: 60vh;
+    background-color: rgba(0, 5, 8, 0.65);
+}
+
+.headerContent{
+    z-index:2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContent h2 {
+    padding-top: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 0px #000;
+    text-transform: uppercase;
+}
+
+.headerSubtitle {
+    display: block;
+    padding: 15px;
+    border-top: solid;
+    border-color: #ffd587;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    text-shadow: 4px 4px 0px #000000;
+    font-size: .8em;
+}
 /* MAIN */
 /* Ce qui concerne le corps du site */
 
