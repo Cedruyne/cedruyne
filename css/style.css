@@ -10,9 +10,6 @@
     color: #ffd587;
 }
 
-.container {
-    max-width: 95% ;
-}
 /*
     ***     MOBILE FIRST        ***
      This applies from 0px to 479px
@@ -22,7 +19,7 @@
 .mainNavigation {
     background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
     box-shadow: 0 3px 10px 0 rgba(0,0,0,0.8);
-    padding: 20px;
+    padding: 1rem 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -30,9 +27,6 @@
     align-items: center;
     transition: all .4s ease;
     z-index: 999;
-}
-
-.fixedNav {
     position: fixed;
     top: 0;
     right: 0;
@@ -47,6 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:0;
 }
 
 .name {
@@ -65,17 +60,11 @@
 .mainNavigation > a {
     display: block;
     padding: .1rem;
-    min-height:5.7em;
+    min-height: 5em;
     text-decoration: none;
     text-align: center;
 }
 
-.mainNavigation .fa{
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: .5rem;
-}
 
 /* Navigation link styles */
 .navLink {
@@ -100,7 +89,7 @@
 .navLink--yaku::before {
     content: '';
     position: absolute;
-    height: 80%;
+    height: 90%;
     width: 100%;
     border-width: 0.2rem 0;
     border-color: #9e9ba4;
@@ -163,10 +152,17 @@
     transition-delay: 0.3s;
 }
 
+.mainNavigation .fa{
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
 /* HEADER */
 .cover{
     background: url(../img/bg_cover.jpg) no-repeat top center fixed;
-    min-height: 600px;
+    min-height: 100vh;
     background-size: cover;
 }
 
@@ -176,7 +172,7 @@
 
 .bgCover{
     z-index: 1;
-    min-height: 600px;
+    min-height: 100vh;
     background-color: rgba(0, 5, 8, 0.45);
 }
 
@@ -210,8 +206,6 @@
     font-size: .8em;
 }
 /* MAIN */
-/* Ce qui concerne le corps du site */
-
 .main {
     padding: 5rem 0;
     background: #fff;
@@ -251,12 +245,7 @@
     transform: rotate(-60deg);
 }
 
-
-/* MAP */
-#map1 {
-    width: 400px;
-    height: 400px;
-}
+/* ABOUT */
 
 .about {
     display: flex;
@@ -264,9 +253,99 @@
     flex-wrap: wrap;
 }
 
+/* RECOMMENDATIONS */
+.recommendation {
+    margin: 3rem 0;
+    padding: 5rem 0;
+    background-color: #F5F5FA;
+}
+
+blockquote {
+    position: relative;
+    display: inline-block;
+    background: #eee;
+    padding: 40px 30px 30px 60px;
+    border-radius: 10px;
+    font-family: 'Bitter', serif;
+    color: #333;
+    text-align: left;
+
+    box-shadow: 1px 1px 1px #999,
+    2px 2px 1px #999,
+    3px 3px 1px #999;
+    transition-duration: .3s;
+}
+
+blockquote:hover {
+    box-shadow: 1px 1px 5px #999,
+    2px 2px 6px #999,
+    3px 3px 7px #999;
+}
+
+blockquote .fa {
+    color: #ffd587;
+}
+
+blockquote cite.author {
+    position: relative;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #999;
+}
+
+blockquote cite.author i {
+    position: relative;
+    background: #eee;
+    padding-left: 5px;
+    font-style: italic;
+    z-index: 5;
+}
+
+blockquote cite.author::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: 1;
+}
+/* MAP */
+#map1 {
+    width: 400px;
+    height: 400px;
+}
+
 
 /* FOOTER */
-/* Ce qui concerne le footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #D3D3D3;
+    background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
+    box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+footer a {
+    color: #D3D3D3;
+}
+
+.footerNavigation > a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.footerNavigation a:hover, a:active, a:focus {
+    color: #ffd587;
+}
 
 
 /*
@@ -330,6 +409,16 @@
     .about article p {
         text-align: justify;
         padding: 0 20px;
+    }
+
+    .recommendation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    blockquote {
+        width: 40%;
     }
 }
 

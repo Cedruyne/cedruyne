@@ -9,7 +9,6 @@ $(document).ready(function () {
 
     // Fixed Navbar on scroll + fading header content
     $(window).scroll(function(){
-        fixNavbar();
         headerVisibility();
     });
     
