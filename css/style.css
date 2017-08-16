@@ -10,6 +10,9 @@
     color: #ffd587;
 }
 
+.container {
+    max-width: 95% ;
+}
 /*
     ***     MOBILE FIRST        ***
      This applies from 0px to 479px
@@ -25,6 +28,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all .4s ease;
+    z-index: 999;
+}
+
+.fixedNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .mainNavigation  a {
@@ -52,8 +64,8 @@
 
 .mainNavigation > a {
     display: block;
-    padding: 10px;
-    height: 100px;
+    padding: .1rem;
+    min-height:5.7em;
     text-decoration: none;
     text-align: center;
 }
@@ -61,9 +73,8 @@
 .mainNavigation .fa{
     display: block;
     font-size: 3rem;
-    padding-top: 5px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: .5rem;
 }
 
 /* Navigation link styles */
@@ -83,7 +94,7 @@
     text-transform: uppercase;
     font-size: 1.5rem;
     overflow: hidden;
-
+    text-shadow: .1rem .1rem 1rem #6e6e6e;
 }
 
 .navLink--yaku::before {
@@ -91,7 +102,7 @@
     position: absolute;
     height: 80%;
     width: 100%;
-    border-width: 2px 0;
+    border-width: 0.2rem 0;
     border-color: #9e9ba4;
     border-style: solid;
     left: 0;
@@ -155,7 +166,7 @@
 /* HEADER */
 .cover{
     background: url(../img/bg_cover.jpg) no-repeat top center fixed;
-    min-height: 60vh;
+    min-height: 600px;
     background-size: cover;
 }
 
@@ -163,10 +174,10 @@
     margin: 0;
 }
 
-header .bgCover{
+.bgCover{
     z-index: 1;
-    min-height: 60vh;
-    background-color: rgba(0, 5, 8, 0.65);
+    min-height: 600px;
+    background-color: rgba(0, 5, 8, 0.45);
 }
 
 .headerContent{
@@ -175,32 +186,84 @@ header .bgCover{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 33%;
 }
 
 .headerContent h2 {
     padding-top: 5em;
     color: #fff;
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: .2rem .2rem 1rem #000;
     text-transform: uppercase;
 }
 
 .headerSubtitle {
     display: block;
-    padding: 15px;
+    padding: 1.5rem;
     border-top: solid;
     border-color: #ffd587;
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
-    text-shadow: 4px 4px 0px #000000;
+    text-shadow: .4rem .4rem 1rem #000;
     font-size: .8em;
 }
 /* MAIN */
 /* Ce qui concerne le corps du site */
 
 .main {
-    padding: 5rem 2rem;
+    padding: 5rem 0;
     background: #fff;
+    text-align: center;
 }
+
+.profil {
+    width: 320px;
+    height: 320px;
+}
+
+/*
+ * ==== hexagon
+ */
+.hexa, .hexa div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+.hexa {
+    width: 325px;
+    height: 230px;
+}
+.hexa div {
+    width: 100%;
+    height: 100%;
+}
+.hexa {
+    transform: rotate(120deg);
+}
+.hex1 {
+    transform: rotate(-60deg);
+}
+.hex2 {
+    transform: rotate(-60deg);
+}
+
+
+/* MAP */
+#map1 {
+    width: 400px;
+    height: 400px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 
 /* FOOTER */
 /* Ce qui concerne le footer */
@@ -225,6 +288,19 @@ header .bgCover{
 
     }
 
+    /* MAIN */
+    .about {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .about article p {
+        text-align: justify;
+        padding: 0 20px;
+    }
+
 }
 
 /*
@@ -238,6 +314,22 @@ header .bgCover{
 
     .mainNavigation a:last-of-type {
         margin-right: 5rem;
+    }
+
+    /* MAIN */
+    .about {
+        flex-direction: row;
+    }
+    .about header {
+        width: 100%;
+    }
+    .about article {
+        width: 50%;
+    }
+
+    .about article p {
+        text-align: justify;
+        padding: 0 20px;
     }
 }
 
