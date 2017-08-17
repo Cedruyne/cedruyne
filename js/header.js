@@ -17,7 +17,6 @@ function headerVisibility() {
 
     if ((scrollPos > 110) || (currentPos > 110))
     {
-        console.log("Scroll Pos : " + scrollPos + "Current Pos : " + currentPos);
         $('.headerContent').addClass('hidden');
     } else
     {

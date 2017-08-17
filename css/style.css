@@ -378,6 +378,40 @@ footer a:hover, a:active, a:focus {
 
 /* LEGAL MODAL */
 
+.modal-header {
+    display: flex;
+    color: #D3D3D3;
+    background: radial-gradient(circle at center,rgb(47, 47, 55), rgb(0,0,0));
+    box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.5);
+    text-align: left;
+}
+.modal-header h3 {
+    width: 80%;
+    margin: 0;
+}
+.modal-header button {
+    padding: 1rem;
+    order: 2;
+    background-color: #ffd587;
+    border-radius: 50%;
+}
+
+.modal-body {
+    text-align: justify;
+    padding: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+.modal-body h4, .modal-body h5 {
+    text-transform: uppercase;
+    color: #ffd587;
+    margin: 2rem 0;
+}
+
+.modal-footer button:hover {
+    background-color: #ffd587;
+    cursor: pointer;
+}
 /* Cacher un élément */
 .hidden {display: none}
 
