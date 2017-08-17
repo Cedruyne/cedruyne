@@ -250,10 +250,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 5rem;
+}
+
+.about h2 {
+    margin: 2rem 0;
 }
 
 .about article {
-    padding: 0 5rem;
+    padding: 5rem;
 }
 
 /* RECOMMENDATIONS */
@@ -370,6 +375,8 @@ footer a:hover, a:active, a:focus {
     order: 2;
     min-width: 100%;
 }
+
+/* LEGAL MODAL */
 
 /* Cacher un élément */
 .hidden {display: none}
