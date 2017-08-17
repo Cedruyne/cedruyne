@@ -190,7 +190,7 @@
 
 .headerContent h2 {
     padding-top: 5em;
-    color: #fff;
+    color: #E7E9EB;
     text-shadow: .2rem .2rem 1rem #000;
     text-transform: uppercase;
 }
@@ -207,7 +207,6 @@
 }
 /* MAIN */
 .main {
-    padding: 5rem 0;
     background: #fff;
     text-align: center;
 }
@@ -255,7 +254,6 @@
 
 /* RECOMMENDATIONS */
 .recommendation {
-    margin: 3rem 0;
     padding: 5rem 0;
     background-color: #F5F5FA;
 }
@@ -347,6 +345,8 @@ footer a {
     color: #ffd587;
 }
 
+/* Cacher un élément */
+.hidden {display: none}
 
 /*
     ***     PORTRAIT/LANDSCAPE TABLET TO DESKTOP         ***
@@ -377,7 +377,7 @@ footer a {
 
     .about article p {
         text-align: justify;
-        padding: 0 20px;
+        padding: 0 3rem;
     }
 
 }
@@ -408,7 +408,7 @@ footer a {
 
     .about article p {
         text-align: justify;
-        padding: 0 20px;
+        padding: 0 3rem;
     }
 
     .recommendation {
