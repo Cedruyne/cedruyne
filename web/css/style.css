@@ -160,17 +160,17 @@
 }
 
 /* HEADER */
-.cover{
-    background: url(../img/bg_cover.jpg) no-repeat top center fixed;
-    min-height: 100vh;
+#cover{
+    background: no-repeat top center fixed;
     background-size: cover;
+    min-height: 100vh;
 }
 
-.cover h2 {
+#cover h2 {
     margin: 0;
 }
 
-.bgCover{
+#bgCover{
     z-index: 1;
     min-height: 100vh;
     background-color: rgba(0, 5, 8, 0.45);

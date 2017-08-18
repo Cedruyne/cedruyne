@@ -7,6 +7,9 @@ $(document).ready(function () {
         heightBackground();
     });
 
+    // Change background image cover
+    changeBackgroundImage();
+
     // Fixed Navbar on scroll + fading header content
     $(window).scroll(function(){
         headerVisibility();

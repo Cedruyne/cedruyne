@@ -7,6 +7,23 @@ function heightBackground(){
     });
 }
 
+function changeBackgroundImage() {
+    var cover = document.getElementById('cover');
+    var bgImage = cover.getAttribute('data-bgImage');
+
+    switch (bgImage)
+    {
+        case "index":
+            cover.style.backgroundImage='url(web/img/index_cover.jpg)';
+            break;
+        case "contact":
+            cover.style.backgroundImage='url(web/img/contact_cover.jpg)';
+            break;
+        default:
+            cover.style.backgroundImage='none';
+    }
+}
+
 function headerVisibility() {
     var scrollPos = $(window).scrollTop();
     var currentPos = window.pageYOffset;
