@@ -19,6 +19,9 @@ function changeBackgroundImage() {
         case "contact":
             cover.style.backgroundImage='url(web/img/contact_cover.jpg)';
             break;
+        case "works":
+            cover.style.backgroundImage='url(web/img/works_cover.jpg)';
+            break;
         default:
             cover.style.backgroundImage='none';
     }

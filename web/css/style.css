@@ -166,9 +166,6 @@
     min-height: 100vh;
 }
 
-#cover h2 {
-    margin: 0;
-}
 
 #bgCover{
     z-index: 1;
@@ -186,6 +183,7 @@
     right: 0;
     left: 0;
     top: 33%;
+
 }
 
 .headerContent h2 {
@@ -198,6 +196,7 @@
 .headerSubtitle {
     display: block;
     padding: 1.5rem;
+    margin-top: 2rem;
     border-top: solid;
     border-color: #ffd587;
     border-top-left-radius: 25%;
@@ -265,17 +264,22 @@
 .recommendation {
     padding: 5rem 0;
     background-color: #F5F5FA;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 blockquote {
-    position: relative;
     display: inline-block;
     background: #eee;
-    padding: 40px 30px 30px 60px;
-    border-radius: 10px;
+    padding: 4rem 3rem 3rem 6rem;
+    border-radius: 1rem;
     font-family: 'Bitter', serif;
     color: #333;
     text-align: left;
+    max-width: 90%;
 
     box-shadow: 1px 1px 1px #999,
     2px 2px 1px #999,
@@ -297,14 +301,14 @@ blockquote cite.author {
     position: relative;
     display: block;
     text-align: right;
-    margin-top: 5px;
+    margin-top: .5rem;
     color: #999;
 }
 
 blockquote cite.author i {
     position: relative;
     background: #eee;
-    padding-left: 5px;
+    padding-left: .5rem;
     font-style: italic;
     z-index: 5;
 }
@@ -378,6 +382,10 @@ footer a:hover, a:active, a:focus {
 
 /* LEGAL MODAL */
 
+.modal-dialog {
+    max-width: 70%;
+}
+
 .modal-header {
     display: flex;
     color: #D3D3D3;
@@ -437,14 +445,31 @@ footer a:hover, a:active, a:focus {
     /* MAIN */
     .about {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
     }
 
+    .about header {
+        min-width: 100%;
+    }
+    .about article {
+        max-width:50%;
+        padding: 2rem;
+    }
+
     .about article p {
         text-align: justify;
-        padding: 0 3rem;
+        padding: 1rem;
+    }
+
+    .recommendation {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .recommendation blockquote {
+        max-width:45% ;
     }
 
 }
@@ -482,10 +507,26 @@ footer a:hover, a:active, a:focus {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: stretch;
     }
 
-    blockquote {
+    .recommendation blockquote {
         width: 40%;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footerLogo{
+        font-size: 3rem;
+    }
+
+    .footerNavigation > a {
+        font-size: 2.5rem;
+        display: inline-block;
+        padding: 3rem  6rem;
     }
 }
 
