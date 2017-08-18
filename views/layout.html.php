@@ -9,14 +9,14 @@
     <meta name="author" content="Cédric de Bruyne" />
 
     <!-- CSS externes -->
-    <link rel="stylesheet" type="text/css" href="web/css/normalize.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="web/css/font-awesome.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="web/css/bootstrap.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="web/css/tether.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/normalize.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/tether.min.css" media="all" />
 
     <!-- CSS de l'application -->
-    <link rel="stylesheet" type="text/css" href="web/css/base.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="web/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../web/css/style.css" media="all" />
 </head>
 <body>
     <div>
@@ -81,19 +81,19 @@
         <main class="main">
         <!-- Chargement de la vue spécifié par le programme PHP -->
             <?php
-                include $view.'.html.php'
+                include $view.'.html.php';
             ?>
         </main>
 
         <!-- Pied de page commun de l'application -->
         <footer>
             <nav class="footerNavigation">
-                <a href="index.php">Présentation</a>
-                <a href="works.php">Réalisations</a>
-                <a href="contact.php">Contact</a>
+                <a href="../index.php">Présentation</a>
+                <a href="../works.php">Réalisations</a>
+                <a href="../contact.php">Contact</a>
             </nav>
             <section class="footerLogo">
-                <a href="index.php" title="Cédric de Bruyne, développeur d'applications Web PHP">
+                <a href="../index.php" title="Cédric de Bruyne, développeur d'applications Web PHP">
                     <span class="name">&lt;<span class="yellow"> &#47; </span>&gt; Cédric de Bruyne</span>
                     <span class="subtitle">Développeur intégrateur d'applications Web</span>
                 </a>

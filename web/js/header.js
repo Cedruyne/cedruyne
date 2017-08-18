@@ -27,16 +27,18 @@ function changeBackgroundImage() {
 function headerVisibility() {
     var scrollPos = $(window).scrollTop();
     var currentPos = window.pageYOffset;
-    $('.headerContent').css({
+    var headerContent = $('.headerContent');
+
+    headerContent.css({
         'margin-top': (scrollPos / 4) + "px",
         'opacity': 1 - (scrollPos / 200)
-    })
+    });
 
     if ((scrollPos > 110) || (currentPos > 110))
     {
-        $('.headerContent').addClass('hidden');
+        headerContent.addClass('hidden');
     } else
     {
-        $('.headerContent').removeClass('hidden');
+        headerContent.removeClass('hidden');
     }
 }
