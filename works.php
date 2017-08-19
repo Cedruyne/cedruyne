@@ -1,7 +1,7 @@
 <?php
 // Déclaration des variables à passer à la vue.
 $cover = 'worksCover';
-$view = 'works';
+$view = 'portfolio/index';
 
 // Appel de la vue.
-include './views/layout.html.php';
+include 'views/layout.html.php';
