@@ -10,20 +10,16 @@ function heightBackground(){
 function changeBackgroundImage() {
     var cover = document.getElementById('cover');
     var bgImage = cover.getAttribute('data-bgImage');
+    console.log("changeBackgroundImage appelé.");
 
+    console.log("Switch bgImage : " + bgImage);
     switch (bgImage)
     {
-        case "index":
-            cover.style.backgroundImage='url(web/img/index_cover.jpg)';
-            break;
         case "contact":
             cover.style.backgroundImage='url(web/img/contact_cover.jpg)';
             break;
-        case "works":
-            cover.style.backgroundImage='url(web/img/works_cover.jpg)';
-            break;
         default:
-            cover.style.backgroundImage='none';
+            cover.style.backgroundImage='url(web/img/cover.jpg)';
     }
 }
 

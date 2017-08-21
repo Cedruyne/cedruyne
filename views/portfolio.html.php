@@ -1,6 +1,5 @@
 <h2>Mes réalisations</h2>
 <?php
-include_once(realpath('controllers/portfolio/index.php'));
 
 foreach ($projects as $project)
 {

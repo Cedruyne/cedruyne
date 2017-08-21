@@ -9,3 +9,6 @@ foreach ($projects as $i => $project)
     $projects[$i]['name'] = htmlspecialchars($project['name']);
     $projects[$i]['description'] = nl2br(htmlspecialchars($project['description']));
 }
+
+// On affiche la page (vue)
+include_once('views/portfolio.html.php');

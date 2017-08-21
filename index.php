@@ -1,8 +1,20 @@
 <?php
 
-// Déclaration des variables à passer à la vue.
-$cover = 'indexCover';
-$view = 'index';
-
-// Appel de la vue.
-include './views/layout.html.php';
+if (!isset($_GET['page']))
+{
+    include_once ('controllers/index.php');
+} else
+{
+    switch ($_GET['page'])
+    {
+        case 'portfolio':
+            include_once('controllers/portfolio.php');
+            break;
+        case 'contact':
+            include_once('controllers/contact.php');
+            break;
+        default:
+            include_once ('controllers/index.php');
+            break;
+    }
+}

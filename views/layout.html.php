@@ -19,18 +19,16 @@
     <link rel="stylesheet" type="text/css" href="../web/css/style.css" media="all" />
 </head>
 <body>
-    <div>
-
-        <!-- En-tête commune de l'application -->
+ <!-- En-tête commune de l'application -->
         <header>
             <nav id="mainNavigation" class="mainNavigation">
                 <h1>
-                    <a href="../index.php" title="Cédric de Bruyne, développeur d'applications Web PHP">
+                    <a href="?page=index" title="Cédric de Bruyne, développeur d'applications Web PHP">
                         <span class="name">&lt;<span class="yellow"> &#47; </span>&gt; Cédric de Bruyne</span>
                         <span class="subtitle">Développeur intégrateur d'applications Web</span>
                     </a>
                 </h1>
-                <a href="../index.php" class="navLink navLink--yaku">
+                <a href="?page=index#about" class="navLink navLink--yaku">
                     <i class="fa fa-user"></i>
                     <span>P</span>
                     <span>r</span>
@@ -45,7 +43,7 @@
                     <span>o</span>
                     <span>n</span>
                 </a>
-                <a href="../works.php" class="navLink navLink--yaku">
+                <a href="?page=portfolio" class="navLink navLink--yaku">
                     <i class="fa fa-archive"></i>
                     <span>R</span>
                     <span>é</span>
@@ -59,7 +57,7 @@
                     <span>o</span>
                     <span>n</span>
                     <span>s</span></a>
-                <a href="../contact.php" class="navLink navLink--yaku">
+                <a href="?page=contact" class="navLink navLink--yaku">
                     <i class="fa fa-envelope-o"></i>
                     <span>C</span>
                     <span>o</span>
@@ -88,12 +86,12 @@
         <!-- Pied de page commun de l'application -->
         <footer>
             <nav class="footerNavigation">
-                <a href="../index.php">Présentation</a>
-                <a href="../works.php">Réalisations</a>
-                <a href="../contact.php">Contact</a>
+                <a href="?page=index#about">Présentation</a>
+                <a href="?page=portfolio">Réalisations</a>
+                <a href="?page=contact">Contact</a>
             </nav>
             <section class="footerLogo">
-                <a href="../index.php" title="Cédric de Bruyne, développeur d'applications Web PHP">
+                <a href="?page=index" title="Cédric de Bruyne, développeur d'applications Web PHP">
                     <span class="name">&lt;<span class="yellow"> &#47; </span>&gt; Cédric de Bruyne</span>
                     <span class="subtitle">Développeur intégrateur d'applications Web</span>
                 </a>
@@ -140,10 +138,10 @@
             </div><!-- end modal-content -->
         </div><!-- end modal-dialog -->
     </div>
-    <script src="../web/js/jquery.min.js"></script>
-    <script src="../web/js/tether.min.js"></script>
-    <script src="../web/js/bootstrap.min.js"></script>
-    <script src="../web/js/header.js"></script>
-    <script src="../web/js/main.js"></script>
+    <script src="web/js/jquery.min.js"></script>
+    <script src="web/js/tether.min.js"></script>
+    <script src="web/js/bootstrap.min.js"></script>
+    <script src="web/js/header.js"></script>
+    <script src="web/js/main.js"></script>
 </body>
 </html>
