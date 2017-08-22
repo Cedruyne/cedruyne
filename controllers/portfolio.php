@@ -1,7 +1,7 @@
 <?php
 // On demande les cinq derniers projets au modéle.
 include_once(realpath('models/portfolio/get_projects.php'));
-$projects = get_projects(0,5);
+$projects = get_projects(0,2);
 
 
 // On sécurise l'affichage

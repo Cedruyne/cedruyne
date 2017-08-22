@@ -10,7 +10,7 @@ function get_projects($offset, $limit)
     // ANY_VALUE() Fix SQL error due sql_mode=only_full_group_by, MYSQL 5.7 : https://lc.cx/cBGq
     $query = $pdo->prepare(
         ' SELECT p.id, p.name AS pName, p.description AS pDescription, DATE_FORMAT(p.record_date, \'%d/%M/%Y\') AS pCreationDateFR, 
-                    p.url AS PURL, i.id, i.alt AS iAlt, i.portfolio_id, i.src AS iSrc, GROUP_CONCAT(t.name) AS technologies
+                    p.url AS pURL, i.id, i.alt AS iAlt, i.portfolio_id, i.src AS iSrc, GROUP_CONCAT(t.name) AS technologies
                     FROM portfolio AS p
                     INNER JOIN images AS i ON (p.id = i.portfolio_id)
                     INNER JOIN portfolioTechnology AS pt ON (p.id = pt.portfolio_id)

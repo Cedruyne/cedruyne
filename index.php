@@ -13,6 +13,9 @@ if (!isset($_GET['page']))
         case 'contact':
             include_once('controllers/contact.php');
             break;
+        case 'mail':
+            include_once ('controllers/mail.php');
+            break;
         default:
             include_once ('controllers/index.php');
             break;

@@ -8,8 +8,7 @@
             <article class="projectContainer">
                 <img src="<?php echo $project['iSrc']; ?>" alt="<?php echo $project['iAlt']; ?>"/>
                 <div class="projectDescription">
-                    <h3><?php echo $project['pName']; ?></h3>
-                    <p><?php echo $project['technologies']; ?> </p>
+                    <a href="<?php echo $project['pURL']; ?>"><h3><?php echo $project['pName']; ?></h3></a>
                 </div>
             </article>
 

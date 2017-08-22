@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cedruyne
- * Date: 21/08/2017
- * Time: 11:46
- */
+
+$cover = 'contactCover';
+$view = 'contact';
+
+// Appel de la vue.
+include 'views/layout.html.php';

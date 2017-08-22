@@ -28,7 +28,7 @@
                         <span class="subtitle">Développeur intégrateur d'applications Web</span>
                     </a>
                 </h1>
-                <a href="?page=index#about" class="navLink navLink--yaku">
+                <a href="?page=index" class="navLink navLink--yaku">
                     <i class="fa fa-user"></i>
                     <span>P</span>
                     <span>r</span>
@@ -86,7 +86,7 @@
         <!-- Pied de page commun de l'application -->
         <footer>
             <nav class="footerNavigation">
-                <a href="?page=index#about">Présentation</a>
+                <a href="?page=index">Présentation</a>
                 <a href="?page=portfolio">Réalisations</a>
                 <a href="?page=contact">Contact</a>
             </nav>
@@ -100,7 +100,6 @@
                 <p>Copyright © 2017 by Cédric de Bruyne, All rights reserved | <a href="#legalModal" data-toggle="modal" class="legal">Mentions légales</a> </p>
             </section>
         </footer>
-    </div>
 
     <div class="modal fade" id="legalModal" aria-labelledby="Legal" aria-hidden="true">
         <div class="modal-dialog">
