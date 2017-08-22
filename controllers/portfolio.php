@@ -3,12 +3,18 @@
 include_once(realpath('models/portfolio/get_projects.php'));
 $projects = get_projects(0,5);
 
+
 // On sécurise l'affichage
 foreach ($projects as $i => $project)
 {
-    $projects[$i]['name'] = htmlspecialchars($project['name']);
-    $projects[$i]['description'] = nl2br(htmlspecialchars($project['description']));
+    $projects[$i]['pName'] = htmlspecialchars($project['pName']);
+    $projects[$i]['pDescription'] = nl2br(htmlspecialchars($project['pDescription']));
+    $projects[$i]['iAlt'] = htmlspecialchars($project['iAlt']);
 }
 
-// On affiche la page (vue)
-include_once('views/portfolio.html.php');
+
+$cover = 'worksCover';
+$view = 'portfolio';
+
+// Appel de la vue.
+include 'views/layout.html.php';

@@ -163,13 +163,13 @@
 #cover{
     background: no-repeat top center fixed;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 60rem;
 }
 
 
 #bgCover{
     z-index: 1;
-    min-height: 100vh;
+    min-height: 60rem;
     background-color: rgba(0, 5, 8, 0.45);
 }
 
@@ -249,15 +249,22 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 .about h2 {
-    margin: 2rem 0;
+    margin: 3rem 0;
+    text-transform: uppercase;
 }
 
 .about article {
     padding: 5rem;
+}
+
+.about article h3 {
+    margin:2rem ;
+    text-transform: uppercase;
+    color: #ffd587;
 }
 
 /* RECOMMENDATIONS */
@@ -324,10 +331,17 @@ blockquote cite.author::before {
     background: #ccc;
     z-index: 1;
 }
-/* MAP */
-#map1 {
-    width: 400px;
-    height: 400px;
+
+/* PORTFOLIO */
+#projectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectContainer h3 {
+    background-color: #ffd587;
 }
 
 
